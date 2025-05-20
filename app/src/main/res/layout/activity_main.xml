@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/activity_main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUIZ APP"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="75dp"
+        />
+
+    <TextView
+        android:id="@+id/activity_main_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estados Brasileiros"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_title"
+        />
+
+    <ImageView
+        android:id="@+id/activity_main_logo"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:src="@drawable/brazil2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_msg"/>
+
+    <Button
+        android:id="@+id/activity_main_button"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="Iniciar"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_700"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/adView"
+        />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9489902677023247/9083389388"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintBottom_toBottomOf="parent">
+    </com.google.android.gms.ads.AdView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
